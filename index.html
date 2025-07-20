@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Companion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+    <header>
+        <h1>Student Companion</h1>
+        <nav>
+            <button onclick="showPage('dashboard')">Dashboard</button>
+            <button onclick="showPage('routine')">Routine</button>
+            <button onclick="showPage('courses')">Course Manager</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Dashboard Page -->
+        <section id="dashboard" class="page active">
+            <h2>Dashboard</h2>
+            <div class="card">
+                <h3>Today's Classes</h3>
+                <p>You have 2 classes today.</p>
+            </div>
+        </section>
+
+        <!-- Routine Page -->
+        <section id="routine" class="page">
+            <h2>Class Routine</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Time</th>
+                        <th>Course</th>
+                        <th>Room</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Routine data will be inserted here by JavaScript -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Course Manager Page -->
+        <section id="courses" class="page">
+            <h2>Course Manager</h2>
+            <form id="add-course-form">
+                <input type="text" id="course-name" placeholder="Course Code (e.g., CSE101)" required>
+                <input type="text" id="course-title" placeholder="Course Title" required>
+                <button type="submit">Add Course</button>
+            </form>
+            <h3>My Courses</h3>
+            <ul id="course-list">
+                <!-- Course list will be populated by JavaScript -->
+            </ul>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
